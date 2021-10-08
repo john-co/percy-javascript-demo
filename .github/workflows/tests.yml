@@ -10,7 +10,7 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
-    
+
     strategy:
       matrix:
         node-version: [12.x, 14.x]
@@ -26,5 +26,5 @@ jobs:
       - run: npm ci
 
       - run: npm test
-        env: 
+        env:
           APPLITOOLS_API_KEY: ${{ secrets.APPLITOOLS_API_KEY }}

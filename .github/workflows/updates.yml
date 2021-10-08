@@ -27,14 +27,14 @@ jobs:
 
       - name: Check for Updates
         run: ncu -u
-    
+
       - name: Install Updates
         run: npm install
-      
+
       - run: npm test
-        env: 
+        env:
           APPLITOOLS_API_KEY: ${{ secrets.APPLITOOLS_API_KEY }}
-        
+
       - uses: mikeal/publish-to-github-action@master
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
