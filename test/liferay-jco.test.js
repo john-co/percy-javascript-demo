@@ -38,11 +38,21 @@ describe('Demo App - Basic', function () {
 
     await driver.get('http://localhost:8080');
 
+    // await driver.findElement(By.className('sign-in')).click();
+
+    // await driver.findElement(By.id('_com_liferay_login_web_portlet_LoginPortlet_login')).sendKeys("test@liferay.com");
+
+    // await driver.findElement(By.id('_com_liferay_login_web_portlet_LoginPortlet_password')).sendKeys("test");
+
+    // await driver.get('http://localhost:8080/web/guest/home')
+
+    // await driver.findElement(By.xpath("//*[contains(@class,'nav-link') and normalize-space()='Badges'][not(contains(@id,'ProductMenu') or contains(@href,'site_administration'))]")).click();
+
     // Label App name, testcase name and browser screensize
     await eyes.open(driver, 'Liferay Portal App Name', 'new testcase name', new RectangleSize(800, 600))
 
     // Take a screenshot of the full page, label the screenshot "Landing Page"
-    await eyes.check('Landing Page', Target.window().fully());
+    await eyes.check('Clay Alert Component', Target.window().fully());
 
     // Terminates the test
     await eyes.close();
